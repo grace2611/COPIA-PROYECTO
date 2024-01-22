@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap');
+/* Reset de márgenes y rellenos */
+body, h1, h2, h3, p, ul {
+    margin: 0;
+    padding: 0;
+}
+main {
+    padding: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Estilos de la barra de búsqueda y ordenación */
+.search-container {
+    padding: 20px;
+    background-color: #fff;
+}
+
+.search-controls {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#searchInput {
+    flex-grow: 1;
+    padding: 5px;
+}
+
+.sort-controls {
+    margin-left: 10px;
+}
+
+/* Estilos de la navegación de géneros */
+h3, .nav {
+    text-align: center;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn-genre {
+    padding: 10px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Estilos de la información de videojuegos */
+/* ... (resto del CSS) ... */
+
+/* Estilos de la información de videojuegos */
+.todos-generos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    margin: 0 auto; /* Centrar el contenedor */
+    max-width: 1200px; /* Establecer un ancho máximo */
+}
+
+.videojuego {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.videojuego .nombre-contenedor {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+.videojuego-tittle {
+    margin: 0;
+}
+
+.videojuego-thumbnail img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.videojuego-info {
+    padding: 10px;
+}
+
+/* ... (resto del CSS) ... */
+
+
+/* Estilos de las estadísticas */
+h3 {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+
+/* Estilos del botón de cargar más */
+#load-more {
+    margin: 20px auto; /* Centrar el botón de cargar más */
+    padding: 10px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}

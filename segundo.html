@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/segundo.css">
+    <title>Información de Videojuegos</title>
+</head>
+<body>
+
+    <header>
+        <h1>INFORMACIÓN DE VIDEOJUEGOS</h1>
+    </header>
+
+
+    <header class="search-container">
+            <div class="search-controls">
+                <input type="text" id="searchInput" placeholder="Busca un videojuego...">
+                <button id="btnBuscar">Buscar</button>
+            </div>
+            <div class="sort-controls">
+                <label for="sortOrder">Ordenar por:</label>
+                <select id="sortOrder">
+                    <option value="asc">A-Z</option>
+                    <option value="desc">Z-A</option>
+                </select>
+            </div>
+    </header>
+    
+
+    <h3>SELECCIONA UN GÉNERO:</h3>
+    <nav class="nav">
+        <ul class="nav-list">
+            <li class="nav-item"><button class="btn-genre" id="ver-todos">Ver todos</button></li> 
+            <li class="nav-item"><button class="btn-genre Shooter" id="Shooter">Shooter</button></li>
+            <li class="nav-item"><button class="btn-genre MMOARPG" id="MMOARPG">MMOARPG</button></li>
+            <li class="nav-item"><button class="btn-genre ARPG" id="ARPG">ARPG</button></li>
+            <li class="nav-item"><button class="btn-genre Strategy" id="Strategy">Strategy</button></li>
+            <li class="nav-item"><button class="btn-genre Electric" id="electric">Electric</button></li>
+            <li class="nav-item"><button class="btn-genre Fighting" id="Fighting">Fighting</button></li>
+            <li class="nav-item"><button class="btn-genre Action RPG" id="RPG">RPG</button></li>
+            <li class="nav-item"><button class="btn-genre Battle Royale" id="Battle Royale">Battle Royale</button></li>
+            <li class="nav-item"><button class="btn-genre MOBA" id="MOBA">MOBA</button></li>
+            <li class="nav-item"><button class="btn-genre Card" id="Card">Card</button></li>
+            <li class="nav-item"><button class="btn-genre Sports" id="Sports">Sports</button></li>
+            <li class="nav-item"><button class="btn-genre Racing" id="Racing">Racing</button></li>
+            <li class="nav-item"><button class="btn-genre Card Game" id="Card Game">Card Game</button></li>
+            <li class="nav-item"><button class="btn-header MMO" id="MMO">MMO</button></li>
+            <li class="nav-item"><button class="btn-header Social" id="Social">Social</button></li>
+            <li class="nav-item"><button class="btn-header MMORPG" id="MMORPG">MMORPG</button></li>
+            <li class="nav-item"><button class="btn-header Fantasy" id="Fantasy">Fantasy</button></li>
+        </ul>
+    </nav>
+    <main>
+        <div id="todos">
+            <div class="todos-generos" id="listaVideojuegos">
+            <!--   <div class="videojuego">
+                    <div class="nombre-contenedor">
+                        <p class="videojugo-id">#540</p>
+                        <h2 class="videojuego-tittle">Overwatch 2</h2>
+                    </div> 
+                    <div class="videojuego-thumbnail">
+                        <img src="https:\/\/www.freetogame.com\/g\/455\/thumbnail.jpg" alt="Pikachu">
+                    </div>
+    
+                    <div class="videojuego-info">
+                    
+                        <div class="videojuego-genre">
+                            <p class="genre">Género: Shooter</p>
+                        </div>
+                        <div class="videojuego-platform">
+                            <p class="platform">Plataforma: Web Browser</p>
+                        </div>
+                        <div class="videojuego-release_date">
+                            <p class="release_date">Lanzamiento: 2019-05-21</p>
+                        </div>
+                        <div class="game_url">
+                            <a class="game_url" href="https:\/\/www.freetogame.com\/open\/eternal-fury">Jugar</a>
+                        </div>
+                
+                
+                    </div>
+    
+                </div> --> 
+    
+                
+
+            </div>
+        
+        
+            
+        </div>
+    </main>
+
+    
+
+    <div>
+        <button id="load-more">Cargar más imágenes</button>
+    </div>
+
+    <div>
+        <h3>ESTADÍSTICAS:</h3>
+    </div>
+
+    <script src="assets/js/script2.js" defer></script>
+
+</body>
+</html>
