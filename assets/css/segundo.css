@@ -201,3 +201,9 @@ h3 {
     font-size: 28px;
     color: #e74c3c;
 }
+
+footer {
+    background-color: #ff17bd0a;
+    color: beige;
+    justify-content:center;
+}
