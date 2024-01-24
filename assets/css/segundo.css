@@ -1,54 +1,108 @@
 @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap');
-/* Reset de márgenes y rellenos */
-body, h1, h2, h3, p, ul {
-    margin: 0;
-    padding: 0;
-}
-main {
-    padding: 2rem;
-    max-width: 1000px;
-    margin: 0 auto;
-}
 
-/* Estilos generales */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Pixelify Sans', Arial, sans-serif;
     line-height: 1.6;
-    background-color: #f5f5f5;
-    color: #333;
+    color: #ecf0f1;
+    margin: 0;
+    transition: background-color 0.3s ease;
+    background: linear-gradient(to bottom right, rgb(16, 14, 36), rgb(54, 0, 51), rgb(17, 0, 68)); /* Gradiente de colores */
+    overflow-x: hidden; /* Evita la barra de desplazamiento horizontal */
 }
 
-header {
-    background-color: #4CAF50;
-    color: white;
+header h2 {
+    font-size: 18px;           /* Tamaño del texto (ajústalo según tus preferencias) */
+        color: yellow;             /* Color del texto (amarillo en este caso) */
+        text-shadow: 
+          -1px -1px 0 blue,        /* Sombra superior izquierda (color azul) */
+           1px -1px 0 blue,        /* Sombra superior derecha (color azul) */
+          -1px  1px 0 blue,        /* Sombra inferior izquierda (color azul) */
+           1px  1px 0 blue;        /* Sombra inferior derecha (color azul) */
+}
+
+/* Estilos del contenedor del encabezado */
+.search-container {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000; /* Asegura que el encabezado esté por encima de otros elementos */
+    color: #fff;
     text-align: center;
-    padding: 10px;
+}
+
+
+.search-container.scrolling {
+    background: rgba(16, 14, 36, 0.745); /* Fondo semi-transparente */
 }
 
 /* Estilos de la barra de búsqueda y ordenación */
 .search-container {
+    display: flex;
+    justify-content: space-between;
     padding: 20px;
-    background-color: #fff;
+    background-color: rgb(16, 14, 36);
+    transition: background-color 0.3s ease;
 }
 
-.search-controls {
+.search-controls, .sort-controls {
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
 }
 
-#searchInput {
-    flex-grow: 1;
-    padding: 5px;
+#searchInput, #sortOrder, #btnBuscar {
+    padding: 12px;
+    border: 1px solid #a569bd;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #ecf0f1;
+    background-color: rgba(255, 255, 255, 0.19);
+    transition: background-color 0.3s ease;
 }
 
-.sort-controls {
+#searchInput{
+    width: 110vh;
+}
+
+#btnBuscar {
+    background-color: #5d167c;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
     margin-left: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#btnBuscar:hover {
+    background-color: #c0392b;
+    transform: scale(1.1);
+}
+
+/* Estilos de la ordenación */
+.sort-controls {
+    display: flex;
+    align-items: center;
+}
+
+label {
+    color: #ecf0f1;
+    margin-right: 10px;
+}
+
+#sortOrder {
+    margin-right: 0px;
+    padding: 10px;
+    border: 1px solid rgb(136, 74, 160)c;
+    border-radius: 5px;
+    background-color:  #5d167c;
+    color: #ecf0f1;
+    font-size: 14px;
 }
 
 /* Estilos de la navegación de géneros */
-h3, .nav {
+.nav {
     text-align: center;
+    margin-top: 20px;
 }
 
 .nav-list {
@@ -57,19 +111,41 @@ h3, .nav {
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
+    margin-bottom: 20px;
 }
 
+/* Colores diferentes para cada género */
 .btn-genre {
-    padding: 10px;
-    background-color: #007BFF;
-    color: #fff;
-    border: none;
     cursor: pointer;
+    border: none;
     border-radius: 5px;
+    padding: 12px;
+    font-size: 14px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-/* Estilos de la información de videojuegos */
-/* ... (resto del CSS) ... */
+.btn-genre:hover {
+    transform: scale(1.1);
+}
+
+.btn-genre#ver-todos { background-color: #5dade2; color: #fff; } 
+.btn-genre#shooter { background-color: #8e44ad; color: #fff; } 
+.btn-genre#MMOARPG { background-color: #e74c3c; color: #fff; } 
+.btn-genre#ARPG { background-color: #9b59b6; color: #fff; } 
+.btn-genre#Strategy { background-color: #a569bd; color: #fff; } 
+.btn-genre#electric { background-color: #3498db; color: #fff; } 
+.btn-genre#Fighting { background-color: #3498db; color: #fff; } 
+.btn-genre#RPG { background-color: #1abc9c; color: #fff; } 
+.btn-genre#Battle-Royale { background-color: #5dade2; color: #fff; } 
+.btn-genre#MOBA { background-color: #3498db; color: #fff; } 
+.btn-genre#Card { background-color: #95a5a6; color: #fff; } 
+.btn-genre#Sports { background-color: #16a085; color: #fff; } 
+.btn-genre#Racing { background-color: #8e44ad; color: #fff; } 
+.btn-genre#Card-Game { background-color: #e74c3c; color: #fff; } 
+.btn-genre#MMO { background-color: #3498db; color: #fff; } 
+.btn-genre#Social { background-color: #2c3e50; color: #fff; } 
+.btn-genre#MMORPG { background-color: #c0392b; color: #fff; } 
+.btn-genre#Fantasy { background-color: #8e44ad; color: #fff; } 
 
 /* Estilos de la información de videojuegos */
 .todos-generos {
@@ -77,54 +153,79 @@ h3, .nav {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
     padding: 20px;
-    margin: 0 auto; /* Centrar el contenedor */
-    max-width: 1200px; /* Establecer un ancho máximo */
+    margin: 0 auto;
+    max-width: 1200px;
 }
 
 .videojuego {
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    border: 2px solid rgba(36, 14, 36, 0.768);
+    background-color: rgba(255, 255, 255, 0.112);
+    border-radius: 10px;
     overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.videojuego:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(142, 68, 173, 0.8);
 }
 
 .videojuego .nombre-contenedor {
-    background-color: #333;
+    background-color: #a569bd87;
     color: #fff;
-    padding: 10px;
+    height: 80px;
+    padding: 12px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 .videojuego-tittle {
     margin: 0;
+    font-size: 18px;
+    color: #ecf0f1;
+}
+
+.videojuego-thumbnail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .videojuego-thumbnail img {
+    padding: 10px;
     width: 100%;
-    height: auto;
-    display: block;
+    height: 180px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 .videojuego-info {
-    padding: 10px;
+    padding: 15px;
 }
 
-/* ... (resto del CSS) ... */
-
-
-/* Estilos de las estadísticas */
 h3 {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 150px;
     margin-bottom: 10px;
+    font-size: 28px;
+    color: #e74c3c;
 }
-
 
 /* Estilos del botón de cargar más */
 #load-more {
-    margin: 20px auto; /* Centrar el botón de cargar más */
-    padding: 10px;
-    background-color: #007BFF;
+    margin: 20px auto;
+    padding: 12px 20px;
+    background-color: #3498db;
     color: #fff;
     border: none;
     cursor: pointer;
     border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#load-more:hover {
+    background-color: #2980b9;
+    justify-content: flex-end;
 }
