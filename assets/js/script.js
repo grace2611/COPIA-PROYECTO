@@ -17,7 +17,6 @@ function mostrarVideojuego(videojuego) {
     const div = document.createElement("div");
     div.classList.add("videojuego");  //Abajo con inner.HTMl se estabalece que irá dentro del div
     div.innerHTML = `   
-        <div class="videojuego">
             <div class="nombre-contenedor">
                 <p class="videojugo-id">#${videojuego.id}</p>
                 <h2 class="videojuego-tittle">${videojuego.title}</h2>
@@ -39,7 +38,6 @@ function mostrarVideojuego(videojuego) {
                     <a class="game_url" href="${videojuego.game_url}">Jugar aquí</a>
                 </div>
             </div>
-        </div>
     `;
     listaVideojuegos.append(div);
 }
