@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
     font-family: 'Pixelify Sans', Arial, sans-serif;
@@ -50,6 +55,7 @@ header h2 {
 }
 
 #searchInput, #btnBuscar, #btnEstadisticas {
+    text-decoration: none;
     padding: 12px;
     border: 1px solid #a569bd;
     border-radius: 5px;
@@ -118,24 +124,24 @@ label {
     transform: scale(1.1);
 }
 
-.btn-genre#ver-todos { background-color: #5dade2; color: #fff; } 
-.btn-genre#shooter { background-color: #8e44ad; color: #fff; } 
-.btn-genre#MMOARPG { background-color: #e74c3c; color: #fff; } 
-.btn-genre#ARPG { background-color: #9b59b6; color: #fff; } 
-.btn-genre#Strategy { background-color: #a569bd; color: #fff; } 
-.btn-genre#electric { background-color: #3498db; color: #fff; } 
-.btn-genre#Fighting { background-color: #3498db; color: #fff; } 
-.btn-genre#RPG { background-color: #1abc9c; color: #fff; } 
-.btn-genre#Battle-Royale { background-color: #5dade2; color: #fff; } 
-.btn-genre#MOBA { background-color: #3498db; color: #fff; } 
-.btn-genre#Card { background-color: #95a5a6; color: #fff; } 
-.btn-genre#Sports { background-color: #16a085; color: #fff; } 
-.btn-genre#Racing { background-color: #8e44ad; color: #fff; } 
-.btn-genre#Card-Game { background-color: #e74c3c; color: #fff; } 
-.btn-genre#MMO { background-color: #3498db; color: #fff; } 
-.btn-genre#Social { background-color: #2c3e50; color: #fff; } 
-.btn-genre#MMORPG { background-color: #c0392b; color: #fff; } 
-.btn-genre#Fantasy { background-color: #8e44ad; color: #fff; } 
+.btn-genre#ver-todos { background-color: #5E2750; color: #fff; } 
+.btn-genre#Shooter { background-color: #67306E; color: #fff; } 
+.btn-genre#MMOARPG { background-color: #71398B; color: #fff; } 
+.btn-genre#ARPG { background-color: #7B42A8; color: #fff; }
+.btn-genre#Strategy { background-color: #854CD6; color: #fff; } 
+.btn-genre#electric { background-color: #8E56F3; color: #fff; } 
+.btn-genre#Fighting { background-color: #9A6AF8; color: #fff; } 
+.btn-genre#Action-RPG { background-color: #A67FFD; color: #fff; } 
+.btn-genre#Battle-Royale { background-color: #B294FF; color: #fff; } 
+.btn-genre#MOBA { background-color: #BEA8FF; color: #fff; } 
+.btn-genre#Card { background-color: #CACDFF; color: #fff; } 
+.btn-genre#Sports { background-color: #D6E1FF; color: #fff; } 
+.btn-genre#Racing { background-color: #82B4D4; color: #fff; } 
+.btn-genre#Card-Game { background-color: #6DA4CC; color: #fff; } 
+.btn-genre#MMO { background-color: #5994C3; color: #fff; } 
+.btn-genre#Social { background-color: #4682B9; color: #fff; } 
+.btn-genre#MMORPG { background-color: #3361A3; color: #fff; } 
+.btn-genre#Fantasy { background-color: #214F8E; color: #fff; }
 
 /* Estilos de la información de videojuegos */
 .todos-generos {
@@ -162,8 +168,9 @@ label {
 
 .videojuego .nombre-contenedor {
     background-color: #a569bd87;
+    text-align: center;
     color: #fff;
-    height: 80px;
+    height: 50px;
     padding: 12px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
