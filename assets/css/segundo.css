@@ -214,3 +214,7 @@ footer {
     color: beige;
     justify-content:center;
 }
+.ordered-list {
+    display: flex;
+    flex-direction: row;
+}
