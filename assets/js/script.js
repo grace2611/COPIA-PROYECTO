@@ -47,7 +47,7 @@ const btnGeneros = document.querySelectorAll(".btn-genre"); //selecciono todos l
 btnGeneros.forEach(btn => {       //MÉTODO por each para iterar sobre los elementos
     btn.addEventListener("click", () => {
         const generoSeleccionado = btn.id.replace("-", " "); //obtengo el id de cada boton
-        if (generoSeleccionado === "ver-todos") {
+        if (generoSeleccionado === "ver todos") {
             mostrarTodosLosVideojuegos();
         } else {
             const juegosFiltrados = listaVideojuegosData.filter(videojuego => videojuego.genre.toLowerCase() == generoSeleccionado.toLowerCase());
