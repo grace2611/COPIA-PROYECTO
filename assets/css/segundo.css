@@ -17,27 +17,31 @@ body {
 
 header h2 {
     font-size: 30px;           /* Tamaño del texto (ajústalo según tus preferencias) */
-        color: yellow;             /* Color del texto (amarillo en este caso) */
+        color: rgb(255, 255, 255);             /* Color del texto (amarillo en este caso) */
         text-shadow: 
-          -1px -1px 0 blue,        /* Sombra superior izquierda (color azul) */
-           1px -1px 0 blue,        /* Sombra superior derecha (color azul) */
-          -1px  1px 0 blue,        /* Sombra inferior izquierda (color azul) */
-           1px  1px 0 blue;        /* Sombra inferior derecha (color azul) */
+          -3px -3px 0 rgb(125, 74, 198),        /* Sombra superior izquierda (color azul) */
+           3px -3px 0 rgb(125, 74, 198),        /* Sombra superior derecha (color azul) */
+          -3px  3px 0 rgb(125, 74, 198),        /* Sombra inferior izquierda (color azul) */
+           3px  3px 0 rgb(125, 74, 198);        /* Sombra inferior derecha (color azul) */
+           margin-bottom: 1px;
 }
 
 /* Estilos del contenedor del encabezado */
 .search-container {
     position: fixed;
+    justify-content: center;
     width: 100%;
     top: 0;
     z-index: 1000; /* Asegura que el encabezado esté por encima de otros elementos */
     color: #fff;
     text-align: center;
+    margin-bottom: 1px;
+
 }
 
 
 .search-container.scrolling {
-    background: rgba(16, 14, 36, 0.745); /* Fondo semi-transparente */
+    background: rgba(16, 14, 36, 0.748); /* Fondo semi-transparente */
 }
 
 /* Estilos de la barra de búsqueda y ordenación */
@@ -63,6 +67,7 @@ header h2 {
     color: #ecf0f1;
     background-color: rgba(255, 255, 255, 0.19);
     transition: background-color 0.3s ease;
+    margin-bottom: 1px;
 }
 
 #searchInput{
@@ -71,6 +76,7 @@ header h2 {
 }
 
 #btnBuscar, #btnEstadisticas {
+    font-family: 'Pixelify Sans', Arial, sans-serif;
     background-color: #5d167c;
     color: #fff;
     border: none;
@@ -81,12 +87,13 @@ header h2 {
 }
 
 #btnEstadisticas {
-    margin-right: 65px;
-
+    padding: 9px;
+    margin-bottom: 2px;
+    margin-right: 1%;
 }
 
 #btnBuscar:hover, #btnEstadisticas:hover {
-    background-color: #c0392b;
+    background-color: #2bc0c0;
     transform: scale(1.1);
 }
 
@@ -112,41 +119,44 @@ label {
 
 /* Colores diferentes para cada género */
 .btn-genre {
+    text-transform: uppercase;
     cursor: pointer;
     border: none;
     border-radius: 5px;
     padding: 12px;
-    font-size: 14px;
+    font-size: 20px;
     transition: background-color 0.3s ease, transform 0.3s ease;
+    font-family: 'Pixelify Sans', Arial, sans-serif; /* Agregado aquí */
 }
 
 .btn-genre:hover {
     transform: scale(1.1);
 }
 
-.btn-genre#ver-todos { background-color: #5E2750; color: #fff; } 
-.btn-genre#Shooter { background-color: #67306E; color: #fff; } 
-.btn-genre#MMOARPG { background-color: #71398B; color: #fff; } 
-.btn-genre#ARPG { background-color: #7B42A8; color: #fff; }
-.btn-genre#Strategy { background-color: #854CD6; color: #fff; } 
-.btn-genre#electric { background-color: #8E56F3; color: #fff; } 
-.btn-genre#Fighting { background-color: #9A6AF8; color: #fff; } 
-.btn-genre#Action-RPG { background-color: #A67FFD; color: #fff; } 
-.btn-genre#Battle-Royale { background-color: #B294FF; color: #fff; } 
-.btn-genre#MOBA { background-color: #BEA8FF; color: #fff; } 
-.btn-genre#Card { background-color: #CACDFF; color: #fff; } 
-.btn-genre#Sports { background-color: #D6E1FF; color: #fff; } 
-.btn-genre#Racing { background-color: #82B4D4; color: #fff; } 
-.btn-genre#Card-Game { background-color: #6DA4CC; color: #fff; } 
-.btn-genre#MMO { background-color: #5994C3; color: #fff; } 
-.btn-genre#Social { background-color: #4682B9; color: #fff; } 
-.btn-genre#MMORPG { background-color: #3361A3; color: #fff; } 
-.btn-genre#Fantasy { background-color: #214F8E; color: #fff; }
+.btn-genre#ver-todos { background-color: #5E2750; color: #000000; } 
+.btn-genre#Shooter { background-color: #67306E; color: #000000; } 
+.btn-genre#MMOARPG { background-color: #71398B; color: #000000; } 
+.btn-genre#ARPG { background-color: #7B42A8; color: #000000; }
+.btn-genre#Strategy { background-color: #854CD6; color: #000000; } 
+.btn-genre#electric { background-color: #8E56F3; color: #000000; } 
+.btn-genre#Fighting { background-color: #9A6AF8; color: #000000; } 
+.btn-genre#Action-RPG { background-color: #A67FFD; color: #000000; } 
+.btn-genre#Battle-Royale { background-color: #B294FF; color: #000000; } 
+.btn-genre#MOBA { background-color: #BEA8FF; color: #000000; } 
+.btn-genre#Card { background-color: #CACDFF; color: #000000; } 
+.btn-genre#Sports { background-color: #D6E1FF; color: #000000; } 
+.btn-genre#Racing { background-color: #82B4D4; color: #000000; } 
+.btn-genre#Card-Game { background-color: #6DA4CC; color: #000000; } 
+.btn-genre#MMO { background-color: #5994C3; color: #000000; } 
+.btn-genre#Social { background-color: #4682B9; color: #000000; } 
+.btn-genre#MMORPG { background-color: #3361A3; color: #000000; } 
+.btn-genre#Fantasy { background-color: #214F8E; color: #000000; }
+
 
 /* Estilos de la información de videojuegos */
 .todos-generos {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
     gap: 20px;
     padding: 20px;
     margin: 0 auto;
@@ -201,12 +211,36 @@ label {
     padding: 15px;
 }
 
-h3 {
+.game_url{
+    background-color: #7a476dbc;
+    text-decoration: none;
+    padding: 2px;
+    border-radius: 5px;
+    font-size: 12px;
+    color: #ecf0f1;   
+    text-transform: uppercase;
     text-align: center;
+    font-size: 22px;
+    font-size: 30px;           /* Tamaño del texto (ajústalo según tus preferencias) */
+        color: rgb(255, 255, 255);             /* Color del texto (amarillo en este caso) */
+        text-shadow: 
+          -1px -1px 0  rgb(116, 17, 123),        /* Sombra superior izquierda (color azul) */
+           1px -1px 0  rgb(116, 17, 123),        /* Sombra superior derecha (color azul) */
+          -1px  1px 0  rgb(116, 17, 123),        /* Sombra inferior izquierda (color azul) */
+           1px  1px 0 rgb(116, 17, 123);        /* Sombra inferior derecha (color azul) */
+}
+
+h3 {
     margin-top: 150px;
     margin-bottom: 10px;
+    margin-left: 3%;
     font-size: 28px;
-    color: #e74c3c;
+    color: rgb(255, 255, 255);             /* Color del texto (amarillo en este caso) */
+    text-shadow: 
+      -1px -1px 0  rgb(62, 139, 187),        /* Sombra superior izquierda (color azul) */
+       1px -1px 0  rgb(62, 139, 187),        /* Sombra superior derecha (color azul) */
+      -1px  1px 0  rgb(62, 139, 187),        /* Sombra inferior izquierda (color azul) */
+       1px  1px 0 rgb(62, 139, 187);        /* Sombra inferior derecha (color azul) */
 }
 
 footer {

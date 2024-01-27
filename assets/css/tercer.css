@@ -20,9 +20,17 @@ body {
 }
 
 #estadisticas h2 {
-  color: #fff;
-  font-size: 2em;
+  margin-top: 2%;
+  font-size: 40px;
   margin-bottom: 10px;
+  text-transform: uppercase;
+  color: rgb(255, 255, 255);             /* Color del texto (amarillo en este caso) */
+        text-shadow: 
+          -3px -3px 0 rgb(125, 74, 198),        /* Sombra superior izquierda (color azul) */
+           3px -3px 0 rgb(125, 74, 198),        /* Sombra superior derecha (color azul) */
+          -3px  3px 0 rgb(125, 74, 198),        /* Sombra inferior izquierda (color azul) */
+           3px  3px 0 rgb(125, 74, 198);        /* Sombra inferior derecha (color azul) */
+           margin-bottom: 1px;
 }
 
 #estadisticas p {
@@ -42,7 +50,7 @@ body {
 
 .chart-container:hover {
   transform: scale(1.01);
-  box-shadow: 0 0 20px rgba(142, 68, 173, 0.8);
+  box-shadow: 0 0 40px rgba(142, 68, 173, 0.8);
 }
 
 .chart-container h2 {
@@ -80,4 +88,8 @@ body {
   margin-right: 8px;
   border-radius: 50%;
   background-color: #6c5ce7;
+}
+
+.chart-container{
+  margin-bottom: 5%;
 }

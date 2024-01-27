@@ -1,3 +1,16 @@
+//DISEÑO DEL HEADER
+window.onscroll = function() {
+    scrollFunction();
+};
+
+function scrollFunction() {
+    var header = document.querySelector('header');
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        header.classList.add('scrolling');
+    } else {
+        header.classList.remove('scrolling');
+    }
+}
 //1ero selecciono el elemnto DOM con el id "listaVideojuegos" y lo almaceno
 const listaVideojuegos = document.querySelector("#listaVideojuegos");
 let listaVideojuegosData = []; //Inicializo variable para almacernar lso datos de los juegos
