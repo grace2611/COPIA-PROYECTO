@@ -19,7 +19,6 @@ function mostrarVideojuego(videojuego) {
     div.classList.add("videojuego");  //Abajo con inner.HTMl se estabalece que irá dentro del div
     div.innerHTML = `   
             <div class="nombre-contenedor">
-                <p class="videojugo-id">#${videojuego.id}</p>
                 <h2 class="videojuego-tittle">${videojuego.title}</h2>
             </div> 
             <div class="videojuego-thumbnail">
@@ -36,7 +35,7 @@ function mostrarVideojuego(videojuego) {
                     <p class="release_date">Lanzamiento: ${videojuego.release_date}</p>
                 </div>
                 <div class="game_url">
-                    <a class="game_url" href="${videojuego.game_url}">Jugar aquí</a>
+                <a class="game_url" href="${videojuego.game_url}" target="_blank">Jugar aquí</a>
                 </div>
             </div>
     `;
@@ -47,7 +46,7 @@ const btnGeneros = document.querySelectorAll(".btn-genre"); //selecciono todos l
 
 btnGeneros.forEach(btn => {       //MÉTODO por each para iterar sobre los elementos
     btn.addEventListener("click", () => {
-        const generoSeleccionado = btn.id; //obtengo el id de cada boton
+        const generoSeleccionado = btn.id.replace("-", " "); //obtengo el id de cada boton
         if (generoSeleccionado === "ver-todos") {
             mostrarTodosLosVideojuegos();
         } else {
@@ -56,8 +55,6 @@ btnGeneros.forEach(btn => {       //MÉTODO por each para iterar sobre los eleme
             listaVideojuegos.innerHTML = ""; //para vaciar el contenido actual del contenedor donde se muestran los videojuegos.
             juegosFiltrados.forEach(videojuego => mostrarVideojuego(videojuego));
         }
-
-        
     });
 });
 

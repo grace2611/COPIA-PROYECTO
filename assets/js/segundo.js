@@ -8,7 +8,6 @@ $(document).ready(function() {
     // Calcular estadísticas
     var generos = {};
     var plataformas = {};
-    var juegosAntiguos = { juego: null, fecha: new Date() };
 
     data.forEach(function(juego) {
       // Estadísticas de género
@@ -18,11 +17,7 @@ $(document).ready(function() {
       plataformas[juego.platform] = (plataformas[juego.platform] || 0) + 1;
 
       // Juego más antiguo
-      var fechaLanzamiento = new Date(juego.release_date);
-      if (fechaLanzamiento < juegosAntiguos.fecha) {
-        juegosAntiguos.juego = juego;
-        juegosAntiguos.fecha = fechaLanzamiento;
-      }
+      
     });
 
     // Mostrar estadísticas en el div
@@ -31,31 +26,31 @@ $(document).ready(function() {
     mostrarGraficoBarras('Estadísticas de Género', generos, estadisticasDiv);
     mostrarGraficoBarras('Estadísticas de Plataforma', plataformas, estadisticasDiv);
 
-    estadisticasDiv.append('<h2>Juego Más Antiguo</h2>');
-    estadisticasDiv.append('<p>Nombre: ' + juegosAntiguos.juego.title + '</p>');
-    estadisticasDiv.append('<p>Fecha de lanzamiento: ' + juegosAntiguos.juego.release_date + '</p>');
+    
   }
 
   function mostrarGraficoBarras(titulo, datos, contenedor) {
     var canvas = $('<canvas></canvas>');
     contenedor.append('<h2>' + titulo + '</h2>');
-    contenedor.append('<div class="chart-container"></div>');
+    contenedor.append('<div class="chart-container estadisticasDiv"></div>');
     $('.chart-container', contenedor).append(canvas);
 
     var ctx = canvas[0].getContext('2d');
     var etiquetas = Object.keys(datos);
     var valores = Object.values(datos);
 
+    var coloresManual = ['#FF5733', '#33FF57', '#5733FF', '#FFFF33', '#33FFFF'];
+
     new Chart(ctx, {
-      type: 'bar',
-      data: {
-        labels: etiquetas,
-        datasets: [{
-          label: 'Cantidad',
-          data: valores,
-          backgroundColor: 'rgba(75, 192, 192, 0.2)',
-          borderColor: 'rgba(75, 192, 192, 1)',
-          borderWidth: 1
+        type: 'bar',
+        data: {
+            labels: etiquetas,
+            datasets: [{
+                label: 'Cantidad',
+                data: valores,
+                backgroundColor: coloresManual, // Utiliza los colores definidos manualmente
+                borderColor: coloresManual,
+                borderWidth: 1
         }]
       },
       options: {

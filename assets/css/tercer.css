@@ -1,4 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Pixelify Sans', Arial, sans-serif;
+  line-height: 1.6;
+  color: #ecf0f1;
+  margin: 0;
+  transition: background-color 0.3s ease;
+  background: linear-gradient(to bottom right, rgb(16, 14, 36), rgb(54, 0, 51), rgb(17, 0, 68));
+  overflow-x: hidden;
+}
+
+#estadisticas {
+  text-align: center;
+}
+
+#estadisticas h2 {
+  color: #fff;
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+#estadisticas p {
+  color: #ddd;
+}
+
 .chart-container {
-    max-width: 600px;
-    margin: auto;
-  }
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: #ffffff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  position: relative;
+}
+
+.chart-container:hover {
+  transform: scale(1.01);
+  box-shadow: 0 0 20px rgba(142, 68, 173, 0.8);
+}
+
+.chart-container h2 {
+  text-align: center;
+  margin-bottom: 10px;
+  color: #6c5ce7;
+}
+
+.chart-container {
+  width: 1000px;
+  height: 420px;
+  padding: 20px;
+  display: block;
+  margin: 0 auto;
+}
+
+.chart-legend {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  list-style: none;
+}
+
+.chart-legend li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  color: #6c5ce7;
+}
+
+.chart-legend span {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-right: 8px;
+  border-radius: 50%;
+  background-color: #6c5ce7;
+}
