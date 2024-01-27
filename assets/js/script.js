@@ -6,6 +6,7 @@ fetch('datos.json') //funvión fetch para obtener datos
     .then((res) => res.json())
     .then((data) => {
         listaVideojuegosData = data;
+        listaVideojuegosData.sort((a, b) => a.title.localeCompare(b.title));
         // Mostrar videojuegos después de cargar los datos
         listaVideojuegosData.forEach(videojuego => mostrarVideojuego(videojuego));
     })
